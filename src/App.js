@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import PlayGame from "./snakegameenter.png";
 import Dashboard from "./Dashboard";
 
 export default class App extends Component {
@@ -20,7 +19,7 @@ export default class App extends Component {
           <Dashboard />
         ) : (
           <div className="entergame">
-            <img src={PlayGame}></img>
+            <img src="https://i.imgur.com/MTdufdy.png"></img>
             <button className="playbutton" onClick={this.playGame}>
               PLAY
             </button>

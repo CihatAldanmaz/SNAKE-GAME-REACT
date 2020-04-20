@@ -140,6 +140,7 @@ export default class Dashboard extends Component {
     this.setState({
       food: getRandomCoordinates(),
       speed: 200,
+      score: 0,
       direction: `RIGHT`,
       snakeDots: [
         [0, 0],
