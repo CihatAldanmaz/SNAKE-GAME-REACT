@@ -19,7 +19,7 @@ export default class App extends Component {
           <Dashboard />
         ) : (
           <div className="entergame">
-            <img src="https://i.imgur.com/MTdufdy.png"></img>
+            <img src="https://raw.githubusercontent.com/CihatAldanmaz/SNAKE-GAME-REACT/master/src/snakegameenter.png"></img>
             <button className="playbutton" onClick={this.playGame}>
               PLAY
             </button>
