@@ -1,17 +1,66 @@
+.entergame{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 4rem;
+}
+
+
+
+.entergame img {
+  width: 50%;
+  height: 50%;
+  border: 6px greenyellow solid;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.2);
+  opacity: 80%;
+
+}
+
+.entergame img:hover{
+  opacity: 100%;
+}
+
+.playbutton{
+  margin-top: 8px;
+  width: 130px;
+  height: 70px;
+  background-color: green;
+  color:white;
+  font-weight: 600;
+  font-size: 24px;
+  cursor: pointer;
+  border: 6px greenyellow solid;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.2);
+  border-radius: 20px;
+
+}
+
+.playbutton:hover{
+  background-color: #67DB38;
+}
+
+.yourscore{
+  font-size: 35px;
+  color: #67DB38;
+
+}
+
+
 .game-area{
   position: relative;
   margin: 50px auto;
   width: 38rem;
   height: 38rem;
-  border: 2px solid #000;
+  background: black;
+  border: 5px solid green;
 }
 
 .snake-dot {
   position: absolute;
   width: 2%;
   height: 2%;
-  background-color: #000;
-  border: 1px solid #fff;
+  background-color: #67DB38;
+  border: 1px solid black;
 }
 
 .snake-food{
