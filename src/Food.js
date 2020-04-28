@@ -1,4 +1,5 @@
 import React from 'react'
+import food from "./images/food.png"
 
 export default function Food(props) {
 
@@ -8,6 +9,8 @@ export default function Food(props) {
     }
 
     return (
-        <div className="snake-food" style={style}> </div>
+        
+        <img className="snake-food" style={style} src={food} />
+       
     )
 }

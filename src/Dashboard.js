@@ -1,6 +1,12 @@
 import React, { Component } from "react";
 import Snake from "./Snake";
 import Food from "./Food";
+import foodimage from "./images/food.png"
+
+
+let deadaudio = new Audio()
+
+deadaudio.src = "./audio/dead.mp3"
 
 const getRandomCoordinates = () => {
   let min = 1;
@@ -22,10 +28,14 @@ export default class Dashboard extends Component {
     ],
   };
 
+
+
   componentDidMount() {
+      document.onkeydown = this.onKeyDown
     setInterval(this.moveSnake, this.state.speed);
-    document.onkeydown = this.onKeyDown;
   }
+
+//   window.addEven
 
 
   componentDidUpdate(){
@@ -35,7 +45,10 @@ export default class Dashboard extends Component {
     
   }
 
+ 
+
   onKeyDown = (e) => {
+      
     e = e || window.event;
 
     switch (e.keyCode) {
@@ -91,6 +104,7 @@ export default class Dashboard extends Component {
     let head = this.state.snakeDots[this.state.snakeDots.length - 1];
     if (head[0] >= 100 || head[1] >= 100 || head[0] < 0 || head[1] < 0) {
       this.onGameOver();
+      
     }
   };
 
@@ -137,6 +151,7 @@ export default class Dashboard extends Component {
 
   onGameOver = () => {
     alert(`Game Over!`);
+    deadaudio.play()
     this.setState({
       food: getRandomCoordinates(),
       speed: 200,
@@ -152,7 +167,7 @@ export default class Dashboard extends Component {
   render() {
     return (
       <div>
-        <div className="yourscore">Your Score: {this.state.score}</div>
+        <div className="yourscore"><img src={foodimage} /> {this.state.score}</div>
         <div className="game-area">
 
           <Snake snakeDots={this.state.snakeDots} />
