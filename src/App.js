@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Dashboard from "./Dashboard";
+import snakegameenter from "./images/snakegameenter.png"
 
 export default class App extends Component {
   state = {
@@ -19,7 +20,7 @@ export default class App extends Component {
           <Dashboard />
         ) : (
           <div className="entergame">
-            <img src="https://raw.githubusercontent.com/CihatAldanmaz/SNAKE-GAME-REACT/master/src/snakegameenter.png"></img>
+            <img src={snakegameenter}></img>
             <button className="playbutton" onClick={this.playGame}>
               PLAY
             </button>
