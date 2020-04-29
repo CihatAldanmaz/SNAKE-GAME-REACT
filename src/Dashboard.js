@@ -21,7 +21,7 @@ export default class Dashboard extends Component {
     score:0,
     food: getRandomCoordinates(),
     speed: 200,
-    direction: `right`,
+    direction: `RIGHT`,
     snakeDots: [
       [0, 0],
       [2, 0],
