@@ -32,7 +32,7 @@ export default class Dashboard extends Component {
 
   componentDidMount() {
       document.onkeydown = this.onKeyDown
-    setInterval(this.movesnake, this.state.speed);
+    setInterval(this.moveSnake, this.state.speed);
   }
 
 //   window.addEven
